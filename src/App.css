@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+.header-container {
+    padding: 80px 20px 20px;
+    font-size: 30px;
+    border-bottom: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.locations {
+    display: flex;
+    max-width: 1580px;
+    padding: 0 40px;
+    margin-top: 40px;
+    gap: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.location-card {
+    box-shadow: 0px 0px 31px -11px;
+    padding: 16px;
+    border-radius: 10px;
+    width: 25%;
+    transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.location-card:hover {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.location-card.active {
+    background-color: rgb(33, 33, 33);
+    color: white;
+}
+
+.location-card .title {
+    text-align: center;
+}
+
+.quest-info {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.quest-description {
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.quest-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quest-container {
+    width: 25%;
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.quest-description {
+    border: 1px solid black;
+    padding: 20px;
+    width: 75%;
+}
+
+.quest-container li.active {
+    font-weight: bold;
+}
+
+.quest-container li:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    .location-card {
+        width: 100%;
+    }
+
+    .locations {
+        flex-wrap: wrap;
+    }
 }
